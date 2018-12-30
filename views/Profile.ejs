@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+
+    <Title>Profile Page</Title>
+    <meta charset="UTF-8"> 
+    <link rel="stylesheet" type = "text/css" href = "/assets/css/syntax.css">
+    
+
+</head>
+
+
+<body>
+
+
+  <div id = "Profile-Info">
+
+    <img src = "/assets/images/Profile_Pic_Placeholder.png" alt = "Profile_Pic" height="256" width="256" >
+  
+    <h2><%= User.Nick_Name %></h2>
+    <p><%= User.Desc %></p>
+    <p><%= User.Province %>, <%= User.Country %></p>
+    <p>Joined <%= User.Joined %></p>
+    <button type = "button" id = "Message_Person">Message <%= User.Nick_Name %></button>
+
+  </div>
+
+
+  <div id = "Profile-Feed">
+
+    <h2>Feed</h2>
+
+    <div class = "Tweets">
+        <p>C++ is the best programming language out there, hands down</p>
+    
+     
+    </div>
+
+ 
+  </div>
+
+</body>
+
+
+
+</html>
