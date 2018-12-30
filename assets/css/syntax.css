@@ -1,0 +1,52 @@
+#Profile-Info{
+
+
+    border-style: solid;
+    border-radius: 10%;
+    height : 30%;
+    width : 17%;
+    padding: 1%;
+    float: left;
+}
+
+
+#Profile-Info img{
+
+    display: block;
+    margin:auto;
+   
+    max-width:100%;
+    max-height:100%;
+    height:auto;
+    width: 95%;
+}
+
+
+
+#Profile-Info p{
+
+   padding-left: 5%;
+
+}
+
+#Profile-Info #Message_Person{
+
+    display: block;
+    margin:auto;
+   
+    
+}
+
+
+#Profile-Feed{
+    border-style: solid;
+    width: 40%;
+    margin-left: 30%;
+}
+
+.Tweets :nth-child(2){
+
+    font-size: 12px;
+    float: left;
+}
+
