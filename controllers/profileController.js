@@ -13,8 +13,27 @@ var Users  = [
         Joined : "October 2015",
         Email : "testtest2@gmail.com",
         Vertifed : true
-        
-        }
+
+        },
+
+
+        Feed : [
+
+            {Content: "C++ is the best programming lang out there, hands down!", Date: "Jan 2015"},
+            {Content: "HELP IM FAILING EVERYTHING RIGHT NOW", Date: "Mar 2012"},
+            {Content: "Why do none of my professors speak english??????", Date: "Mar 2012"},
+            {Content: "The new spiderverse movie was SICKKKKKKKK", Date: "Mar 2012"},
+            {Content: "Guess who's the best!", Date: "Mar 2012"},
+            {Content: "Im so hungry q.q", Date: "April 2013"},
+            {Content: "Insert pointless quote here :)", Date: "Mar 2012"}
+        ]
+
+
+
+
+
+
+
     }
 ];
 
@@ -70,12 +89,14 @@ module.exports = function(app){
         
         var FoundUser = FindUser(req.params.id,'Username');
 
-        console.log(FoundUser) 
+        //console.log(FoundUser) 
 
        if (FoundUser !== null){
-             res.render('Profile', {User: FoundUser.info});
+           res.status(200);
+             res.render('Profile', {User: FoundUser});
         }
         else{
+            res.status(404);
             res.send('USER DOES NOT EXIST... SORRY!');
         }
     

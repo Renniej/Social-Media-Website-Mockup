@@ -19,6 +19,7 @@ profileController(app);
 
 app.get('*', function(req, res){ //404 Error
 
+    res.status(404);
     res.send('404, PAGE NOT FOUND!');
 
 });
