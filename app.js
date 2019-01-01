@@ -1,7 +1,30 @@
 var express = require('express');
 var app = express();
+const mongoose = require('mongoose');
 
 var profileController = require('./controllers/profileController')
+var AcctCreatorController = require('./controllers/AcctCreatorController');
+
+//ES6 promises
+mongoose.Promise = global.Promise;
+
+
+mongoose.connect('mongodb://localhost/Social-Media-Users'); //Server that stores site Users.
+
+
+mongoose.connection.once('open', function(){
+
+    console.log('Database connection Established :)')
+
+}).on('error', function(err){
+
+    console.log(`DB Connection Error : ${err}`);
+
+});
+
+
+
+
 
 
 
@@ -13,7 +36,7 @@ app.set('view engine', 'ejs');
 //learn sessions
 
 profileController(app);
-
+AcctCreatorController(app);
 
 
 
