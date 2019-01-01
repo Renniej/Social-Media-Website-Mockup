@@ -15,16 +15,17 @@
 
 <body>
 
+  
 
   <div id = "Profile-Info">
 
     <img src = "/assets/images/Profile_Pic_Placeholder.png" alt = "Profile_Pic" height="256" width="256" >
   
-    <h2><%= User.info.Nick_Name %></h2>
-    <p><%= User.info.Desc %></p>
-    <p><%= User.info.Province %>, <%= User.info.Country %></p>
-    <p>Joined <%= User.info.Joined %></p>
-    <button type = "button" id = "Message_Person">Message <%= User.info.Nick_Name %></button>
+    <h2><%= User.NickName %></h2>
+    <p><%= User.Desc %></p>
+    <p><%= User.Province %>, <%= User.Country %></p>
+    <p>Joined <%= User.Joined %></p>
+    <button type = "button" id = "Message_Person">Message <%= User.NickName %></button>
 
   </div>
 
@@ -36,23 +37,23 @@
    
 
       <ul>
-      
-      <%  User.Feed.forEach(function(elem){ %>
+    
+       
+        <%  User.Feed.forEach(function(elem){ %>
 
 
-        <div name = "Tweets">
-
-          
-          <h4><%= elem.Content %></h4>
-          <p><%= elem.Date %></p>
-
-
-        </div>
-
-
-
-      <% }) %>
-
+          <div name = "Tweets">
+  
+            
+            <h4><%= elem.Content %></h4>
+            <p><%= elem.Date %></p>
+  
+  
+          </div>
+  
+  
+  
+        <% }) %>
        
       </ul> 
  
