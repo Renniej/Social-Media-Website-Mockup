@@ -83,4 +83,64 @@ module.exports = function(app){
 
     });
 
+
+
+
+
+    app.get('/editAccount', function(req, res){
+
+
+        User.findOne({Username : "RennieYT"}).then(function(result){
+
+
+            if (result !== null){
+                res.render('EditProfile', {User : result});
+            }
+            else{
+                res.send("User doesn't exist ):")
+            }
+
+
+        
+
+        }).catch(function(err){
+            res.send("Something went wrong!");
+        });
+
+
+    });
+
+
+    app.post('/editAccount', urlencodedParser, function(req, res){
+
+        
+        User.findOneAndUpdate({Username: 'RennieYT'}, {NickName: req.body.Nickname}).then(function(data){
+            
+           User.findOne({Username : 'RennieYT'}).then(function(result){
+
+
+                if (result.Username === 'RennieYT'){
+                    res.redirect(`/profile/${result.Username}`)
+                }
+           
+
+
+           }).catch(function(err){
+
+                res.send("Something went wrong..."  + err);
+
+           })
+
+
+
+         });
+
+    });
+
+    
+
+
+
+
+
 };

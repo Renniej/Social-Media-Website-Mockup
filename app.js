@@ -3,7 +3,7 @@ var app = express();
 const mongoose = require('mongoose');
 
 var profileController = require('./controllers/profileController')
-var AcctCreatorController = require('./controllers/AcctCreatorController');
+var accountController = require('./controllers/accountController');
 
 //ES6 promises
 mongoose.Promise = global.Promise;
@@ -36,7 +36,7 @@ app.set('view engine', 'ejs');
 //learn sessions
 
 profileController(app);
-AcctCreatorController(app);
+accountController(app);
 
 
 

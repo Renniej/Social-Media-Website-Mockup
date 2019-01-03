@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+
+
+<head>
+
+    <title>Profile Panel</title>
+
+
+</head>
+
+<body>
+
+        <form id ="User_Update_Form" action = "/editAccount" method = "post" onsubmit="return ValidateAll()" >
+
+        <p>Nickname</p>
+        <input type = "text" name = "Nickname" id = Nickname value = <%= User.NickName %>>
+        
+
+
+        <p>Description: </p>
+        <textarea name = "Desc" id = "Desc"><%= User.Desc %></textarea>
+    
+
+
+        <p>Email</p>
+        <input type = "text" name = "Email" id = "email" value = <%= User.Email %> >
+    
+
+
+        <p>Password</p>
+        <input type = "text" name = "Password" id = "password">
+    
+
+        <input type = "submit" value = "Update Info" id = "submit">
+
+    </form>
+
+
+</body>
