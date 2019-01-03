@@ -9,8 +9,8 @@ var AcctCreatorController = require('./controllers/AcctCreatorController');
 mongoose.Promise = global.Promise;
 
 
-mongoose.connect('mongodb://localhost/Social-Media-Users'); //Server that stores site Users.
-
+mongoose.connect('mongodb://localhost/Social-Media-Users',{ useNewUrlParser: true }); //Server that stores site Users.
+mongoose.set('useCreateIndex', true);
 
 mongoose.connection.once('open', function(){
 

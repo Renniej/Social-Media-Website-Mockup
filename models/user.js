@@ -17,7 +17,13 @@ const FeedSchema = new Schema({
 
 const UserSchema = new Schema({
 
-    Username : String,
+    Username : {
+
+        type : String,
+        required : true,
+        unique : true
+
+    } ,
     Pass : String,
     NickName : String,
     Desc : String, 
@@ -25,7 +31,12 @@ const UserSchema = new Schema({
     Country : String,
     DOB : String,
     Joined : String,
-    Email : String,
+    
+    Email : {
+        type : String,
+        required : true,
+        unique : true
+    },
     Vertified : Boolean,
 
     Feed : [FeedSchema]

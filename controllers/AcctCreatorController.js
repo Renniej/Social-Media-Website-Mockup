@@ -63,13 +63,19 @@ module.exports = function(app){
             })
 
 
-            newUser.save(function(err, data){
-                if (err){
-                    throw err;
-                }
-                res.redirect('/profile/' + req.body.username);
+            newUser.save(function(err,data){
 
-            });
+
+                if (err){
+                    
+                    res.send('Looks like either your email or username is already in use ):')
+                }
+                else{
+
+                    res.redirect('/profile/' + req.body.username);
+                }
+
+            })
 
 
    
