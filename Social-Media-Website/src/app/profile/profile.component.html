@@ -1,0 +1,61 @@
+<head>
+
+  <Title>Profile Page</Title>
+  <meta charset="UTF-8"> 
+  <link rel="stylesheet" type = "text/css" href = "/assets/css/Profile_Style.css">
+  
+
+</head>
+
+
+<body>
+
+
+
+<div id = "Profile-Info">
+
+  <img src = "/assets/images/Profile_Pic_Placeholder.png" alt = "Profile_Pic" height="256" width="256" >
+
+  <h2><%= User.NickName %></h2>
+  <p><%= User.Desc %></p>
+  <p><%= User.Province %>, <%= User.Country %></p>
+  <p>Joined <%= User.Joined %></p>
+  <button type = "button" id = "Message_Person">Message <%= User.NickName %></button>
+
+</div>
+
+
+<div id = "Profile-Feed">
+
+  <h2>Feed</h2>
+
+ 
+
+    <ul>
+  
+     
+      <%  User.Feed.forEach(function(elem){ %>
+
+
+        <div name = "Tweets">
+
+          
+          <h4><%= elem.Content %></h4>
+          <p><%= elem.Date %></p>
+
+
+        </div>
+
+
+
+      <% }) %>
+     
+    </ul> 
+
+
+  
+
+
+</div>
+
+</body>
