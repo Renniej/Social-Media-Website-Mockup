@@ -30,8 +30,8 @@ const UserSchema = new Schema({
     Desc : String, 
     Province : String,
     Country : String,
-    DOB : String,
-    Joined : String,
+    DOB : Date,
+    Joined : Date,
     
     Email : {
         type : String,
